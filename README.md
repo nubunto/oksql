@@ -50,7 +50,7 @@ Then create a file to wire up your queries and you're done!
   (:require [oksql.core :as oksql])
   (:refer-clojure :exclude [update]))
 
-(def db {:connection-uri "postgres://localhost:5432/your_project_db"})
+(def db {:connection-uri "jdbc:postgresql://localhost:5432/your_database_name?user=youruser&password=yourpassword"})
 
 (def query (partial oksql/query db))
 
